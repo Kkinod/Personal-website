@@ -1,0 +1,49 @@
+:root {
+	--color-grey-default: #537895;
+
+	--color-grey-light-2: #f4f2f2;
+	--color-grey-light-3: #f0eeee;
+	--color-grey-light-4: #ccc;
+
+	--color-grey-dark-1: #333;
+	--color-grey-dark-2: #777;
+	--color-grey-dark-3: #999;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::after,
+*::before {
+	/* Poprzez słowo "inherit" czyli dziedziczenie, wymuszamy dziedziczenie danej właściwości. 
+	W kurse CSS mówi, że bardzo dobrze postrzegane jest przez społeczność CSS gdy tutaj ustawiamy dziedziczenie a "box-sizing" ustawiamy w "body" ponieważ dzięki temu zmiana "box-sizing" jest nieco łatwiejsza, jak w przypadku wtyczek lub innych komponenetów w których chcemy użyć innej właściwości do zmieniania "box-sizing". OGÓLNIE nie robi to wielkiej różnicy, ale jest to lepszą praktyką. */
+	box-sizing: inherit;
+}
+/* Nadajemy font-size ponieważ przy wszelich rozmiarach gdzie będziemy dodawać px (piksele) będziemy pracowam na "rem" a jak wiadomo "1 rem" = wielkość ustalonego font-size w jednostce głównej. DZIEKI TEMU będziemy wpływać na wielkość strony i jej elemntów tylko zmieniając font-size, czyli zrobimy ją responsywną.*/
+html {
+	/* 62.5% ponieważ domyślny rozmiar font-size to 16px a chcemy osiągnąć 10px by używać 1rem=10px*/
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	// flex-direction: row;
+	min-height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+
+	// background-color: #485461;
+	// background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+
+	background-image: url(/img/Background3-large.jpg);
+	
+	background-size: cover;
+	// background-repeat: no-repeat;
+}

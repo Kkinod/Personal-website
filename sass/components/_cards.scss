@@ -1,0 +1,206 @@
+// .card {
+//     perspective: 150rem;
+//     margin: 120px;
+//     position: relative;
+//     height: 50rem;
+
+//     &__side {
+//         // background-color: orangered;
+//         height: 50rem;
+//         width: 30rem;
+//         transition: transform .8s ease;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         backface-visibility: hidden;
+//         border-radius: 3px;
+//         box-shadow: -1rem .5rem 4rem rgba(rgba(255, 68, 0, 0.836), .2);
+
+//         &--front {
+//             background-color: yellow;
+//         }
+    
+//         &--back {
+            
+//             transform: rotateY(180deg);
+
+//             &-1 {
+//                 background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+//             }
+//         }
+//     }
+   
+  
+
+//     &:hover &__side--front {
+//     /* "Hover" na rodzicu (.card) powoduje nadanie "transform" na dziecko (.card__side--front)*/
+//         transform: rotateY(-180deg);
+//     }
+
+//     &:hover &__side--back {
+//     /* "Hover" na rodzicu (.card) powoduje nadanie "transform" na dziecko (.card__side--back)*/
+//         transform: rotateY(0);
+//     }
+
+    
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .card {
+//     display: flex;
+
+// 	&__one,
+// 	&__two,
+// 	&__three {
+// 		position: relative;
+// 		margin: 20px 80px;
+// 		width: 450px;
+// 		height: 700px;
+// 		perspective: 800px; /* Ta właściwość powoduje, że gdy karty będą się obracać to będzie taki efekt skrzydeł motyla */
+
+// 		&-img {
+// 			width: 100%;
+// 			height: 100%;
+// 			background-position: center;
+// 			background-size: cover;
+// 			border-radius: 15px;
+// 			transition: 0.8s;
+// 		}
+
+        
+// 	}
+// }
+
+// .one {
+//     background-image: url('../img/forest-g58b56d175_1280.jpg');
+// }
+// .two {
+//     background-image: url('../img/valley-gf879d27b4_1920.jpg');
+// }
+// .three {
+//     background-image: url('../img/namibia-4965456_1920.jpg');
+// }
+// // .card {
+// // 	position: relative;
+// // 	margin: 20px 80px;
+// // 	width: 450px;
+// // 	height: 700px;
+// // 	perspective: 800px; /* Ta właściwość powoduje, że gdy karty będą się obracać to będzie taki efekt skrzydeł motyla */
+// // }
+
+// // .img {
+// // 	width: 100%;
+// // 	height: 100%;
+// // 	background-position: center;
+// // 	background-size: cover;
+// // 	border-radius: 15px;
+// // 	transition: 0.8s;
+// // }
+
+
+
+// .text {
+// 	position: absolute; /* Ponieważ będziemy go pozycjonować absolutnie względem naszej karty */
+// 	top: 0;
+// 	left: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	padding: 30px;
+// 	border-radius: 15px;
+// 	text-align: center;
+// 	background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+// 	transition: 0.8s;
+// 	opacity: 0; /* przeźroczystość, czyli nie dodajemy elementu w trakcie animacji a po prostu ukrywamy/odkrywamy go */
+// }
+
+// h3 {
+// 	margin-top: 450px;
+// 	margin-bottom: 20px;
+// }
+
+// .text-one {
+// 	transform: rotateX(180deg);
+// }
+
+// .text-two {
+// 	transform: rotateY(-180deg);
+// }
+
+// .card:hover .text {
+// 	transform: rotate(0); /* Dzięki temu gdy obruci się karta, text sie nie obróci  */
+// 	opacity: 1;
+// }
+
+// .card:hover .one {
+// 	transform: rotateX(180deg);
+// }
+
+// .card:hover .two {
+// 	transform: rotateY(-180deg);
+// }
+
+// .card:hover .three {
+// 	animation: up 0.8s;
+// }
+// .card:hover .text-three {
+// 	animation: down 0.8s;
+// }
+
+// @keyframes up {
+// 	/* odwołujemy się do animacji */
+// 	0% {
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+
+// 	50% {
+// 		transform: translateY(-60%);
+// 	}
+
+// 	80% {
+// 		opacity: 1;
+// 	}
+
+// 	100% {
+// 		opacity: 1;
+// 	}
+// }
+
+// @keyframes down {
+// 	0% {
+// 		transform: translateY(0);
+// 		z-index: -1;
+// 	}
+
+// 	50% {
+// 		transform: translateY(60%);
+// 		z-index: -1;
+// 	}
+
+// 	100% {
+// 		z-index: 1;
+// 	}
+// }

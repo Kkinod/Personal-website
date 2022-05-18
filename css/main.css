@@ -1,0 +1,301 @@
+@charset "UTF-8";
+:root {
+  --color-grey-default: #537895;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  /* Poprzez słowo "inherit" czyli dziedziczenie, wymuszamy dziedziczenie danej właściwości. 
+	W kurse CSS mówi, że bardzo dobrze postrzegane jest przez społeczność CSS gdy tutaj ustawiamy dziedziczenie a "box-sizing" ustawiamy w "body" ponieważ dzięki temu zmiana "box-sizing" jest nieco łatwiejsza, jak w przypadku wtyczek lub innych komponenetów w których chcemy użyć innej właściwości do zmieniania "box-sizing". OGÓLNIE nie robi to wielkiej różnicy, ale jest to lepszą praktyką. */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* Nadajemy font-size ponieważ przy wszelich rozmiarach gdzie będziemy dodawać px (piksele) będziemy pracowam na "rem" a jak wiadomo "1 rem" = wielkość ustalonego font-size w jednostce głównej. DZIEKI TEMU będziemy wpływać na wielkość strony i jej elemntów tylko zmieniając font-size, czyli zrobimy ją responsywną.*/
+html {
+  /* 62.5% ponieważ domyślny rozmiar font-size to 16px a chcemy osiągnąć 10px by używać 1rem=10px*/
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(/img/Background3-large.jpg);
+  background-size: cover;
+}
+
+/*------Burger Bar------*/
+.fa-burger {
+  font-size: 3rem;
+  margin-left: 2rem;
+}
+
+/*------Search------*/
+.search {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: var(--color-grey-light-2);
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 100px;
+  width: 90%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-right: -3.5rem;
+}
+
+.search__input:focus {
+  outline: none;
+  width: 100%;
+  background-color: var(--color-grey-light-3);
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: var(--color-grey-light-4);
+}
+
+.search__input:focus + .search__button {
+  background-color: var(--color-grey-light-3);
+}
+
+.search__button {
+  border: none;
+  background-color: var(--color-grey-light-2);
+}
+
+.search__button:focus {
+  outline: none;
+}
+
+.search__button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.search__icon {
+  font-size: 2rem;
+  color: blue;
+}
+
+/*------User nav------*/
+.user-nav {
+  background-color: green;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-nav > * {
+  padding: 0 2rem;
+  cursor: pointer;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-nav > *:hover {
+  background-color: red;
+}
+
+.user-nav__icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-nav__icon {
+  font-size: 2.25rem;
+  color: var(--color-grey-dark-3);
+}
+
+.user-nav__user-photo {
+  height: 4.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 2px solid orange;
+  -webkit-box-shadow: 0 0 1em orange;
+          box-shadow: 0 0 1em orange;
+}
+
+/*------Right navigation------*/
+.right-nav {
+  font-size: 1.5rem;
+  list-style: none;
+  margin-top: 3.5rem;
+  /*Animation on button*/
+  /*---------------------*/
+}
+
+.right-nav__item {
+  position: relative;
+}
+
+.right-nav__item:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.right-nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.right-nav__item:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.right-nav__link:link, .right-nav__link:visited {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding: 1.5rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-nav__link:hover {
+  color: orangered;
+}
+
+.right-nav__icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: currentColor;
+}
+
+/*------Legal Text------*/
+.legal {
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.container {
+  margin: 8rem auto;
+  max-width: 120rem;
+  min-height: 50rem;
+  background-color: #6a6ae7;
+  -webkit-box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.6);
+}
+
+.header {
+  height: 7rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-view {
+  margin-right: auto;
+  background-color: orangered;
+  /*Element should grow much as it can:*/
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.rightbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-view {
+  background-color: #fff;
+  background-color: orangered;
+  height: 80rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.sections-cards {
+  padding: 25rem 0;
+}
+/*# sourceMappingURL=main.css.map */

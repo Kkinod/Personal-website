@@ -1,0 +1,48 @@
+.container {
+    margin: 8rem auto;
+	max-width: 120rem;
+    min-height: 50rem;
+    background-color: rgb(106, 106, 231);
+    // background-color: transparent;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, .6);
+
+}
+
+.header {
+    height: 7rem;
+    font-size: 1.5rem;
+    background-color: #fff;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+}
+
+.main-view {
+    margin-right: auto;
+    background-color: orangered;
+    /*Element should grow much as it can:*/
+    flex: 1;
+}
+
+.rightbar {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    flex: 0 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-view {
+    background-color: #fff;
+    background-color: orangered;
+    height: 80rem;
+
+    flex: 1;
+}
+
