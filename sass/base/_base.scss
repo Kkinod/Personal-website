@@ -14,6 +14,8 @@
 
 	--shadow-orange-main: 0 0 1em orange;
 	--shadow-orange-main-2: 0 0 3em orange;
+
+	--shadow-dodgerblue-main: 0 0 1em dodgerblue;
 }
 
 * {
@@ -41,14 +43,14 @@ body {
 	// align-items: center;
 	// flex-direction: row;
 
-	min-height: 100vh;
+	height: 100vh;
 	font-family: 'Montserrat', sans-serif;
 
 	// background-color: #485461;
 	// background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 
 	// background-image: url(/img/BGC1.jpg);
-	background-image: url(../img/3.jpg);
+	background-image: url(/img/Nowy2.jpg);
 
 	background-size: cover;
 	background-position: center;

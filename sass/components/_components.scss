@@ -15,8 +15,7 @@
 		border-radius: 8px;
 	}
 
-	&:hover {
-		.burger-btn__bars,
+	&:hover {	
 		.burger-btn__bars::after,
 		.burger-btn__bars::before {
 			width: 100%;
@@ -133,8 +132,7 @@
 	}
 
 	& > *:hover &__icon {
-		// background-color: red;
-		// box-shadow: inset 0 0 .1em white, 0 0 .1em white;
+		
 		color: #fff;
 	}
 
@@ -182,7 +180,7 @@
 		top: 0;
 		left: 0;
 		height: 100%;
-		width: 3px;
+		width: 1.5px;
 		// background-color: var(--color-grey-dark-1);
 		background-color: orange;
 		transform: scaleY(0);
