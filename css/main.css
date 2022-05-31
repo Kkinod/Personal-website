@@ -12,6 +12,7 @@
   --color-grey-dark-3: #999;
   --shadow-orange-main: 0 0 1em orange;
   --shadow-orange-main-2: 0 0 3em orange;
+  --shadow-dodgerblue-main: 0 0 1em dodgerblue;
 }
 
 * {
@@ -23,7 +24,7 @@
 *::after,
 *::before {
   /* Poprzez słowo "inherit" czyli dziedziczenie, wymuszamy dziedziczenie danej właściwości. 
-  W kurse CSS mówi, że bardzo dobrze postrzegane jest przez społeczność CSS gdy tutaj ustawiamy dziedziczenie a "box-sizing" ustawiamy w "body" ponieważ dzięki temu zmiana "box-sizing" jest nieco łatwiejsza, jak w przypadku wtyczek lub innych komponenetów w których chcemy użyć innej właściwości do zmieniania "box-sizing". OGÓLNIE nie robi to wielkiej różnicy, ale jest to lepszą praktyką. */
+	W kurse CSS mówi, że bardzo dobrze postrzegane jest przez społeczność CSS gdy tutaj ustawiamy dziedziczenie a "box-sizing" ustawiamy w "body" ponieważ dzięki temu zmiana "box-sizing" jest nieco łatwiejsza, jak w przypadku wtyczek lub innych komponenetów w których chcemy użyć innej właściwości do zmieniania "box-sizing". OGÓLNIE nie robi to wielkiej różnicy, ale jest to lepszą praktyką. */
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -37,9 +38,9 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  font-family: "Montserrat", sans-serif;
-  background-image: url(../img/3.jpg);
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(/img/Nowy2.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -53,23 +54,26 @@ body {
   cursor: pointer;
   z-index: 100;
 }
+
 .burger-btn:focus {
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
 }
-.burger-btn:hover .burger-btn__bars,
+
 .burger-btn:hover .burger-btn__bars::after,
 .burger-btn:hover .burger-btn__bars::before {
   width: 100%;
 }
+
 .burger-btn__box {
   position: relative;
   width: 4rem;
   height: 3rem;
 }
+
 .burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   height: 3px;
@@ -77,13 +81,16 @@ body {
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
+
 .burger-btn__bars {
   width: 100%;
 }
+
 .burger-btn__bars::after {
   top: 1rem;
   width: 60%;
 }
+
 .burger-btn__bars::before {
   top: 2rem;
   width: 30%;
@@ -103,6 +110,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .user-nav > * {
   padding: 0 2rem;
   height: 100%;
@@ -114,9 +122,11 @@ body {
           align-items: center;
   cursor: pointer;
 }
+
 .user-nav > *:hover .user-nav__icon {
   color: #fff;
 }
+
 .user-nav__icon-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,6 +135,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .user-nav__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,6 +151,7 @@ body {
   font-size: 2.25rem;
   color: var(--color-grey-dark-2);
 }
+
 .user-nav__user-photo {
   height: 4.5rem;
   border-radius: 50%;
@@ -157,19 +169,22 @@ body {
   /*Animation on button*/
   /*---------------------*/
 }
+
 .right-nav__item {
   position: relative;
 }
+
 .right-nav__item:not(:last-child) {
   margin-bottom: 0.5rem;
 }
+
 .right-nav__item::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 3px;
+  width: 1.5px;
   background-color: orange;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
@@ -178,12 +193,14 @@ body {
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
+
 .right-nav__item:hover::before {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
   -webkit-box-shadow: var(--shadow-orange-main);
           box-shadow: var(--shadow-orange-main);
 }
+
 .right-nav__link:link, .right-nav__link:visited {
   color: var(--color-grey-dark-2);
   text-decoration: none;
@@ -198,9 +215,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .right-nav__link:hover {
   color: white;
 }
+
 .right-nav__icon {
   font-size: 2rem;
   margin-right: 1rem;
@@ -267,4 +286,5 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */
