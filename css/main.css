@@ -40,7 +40,7 @@ html {
 body {
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
-  background-image: url(/img/Nowy2.jpg);
+  background-image: url(../img/Nowy2.jpg);
   background-size: cover;
   background-position: center;
 }
